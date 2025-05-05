@@ -1,0 +1,54 @@
+@forward '../globals';
+
+%button-filter{
+    font: {
+        size: 1em;
+        weight: 100;
+    }
+    padding: .7em .9em;
+    border: none;
+    background-color: var(--white-color);
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--gray-color);
+    }
+}
+
+%technical-skill{
+         display: inline-block;
+        height: 100%;
+        background-color: var(--heavy-gray);
+        text-align: center;
+        align-content: center;
+}
+
+%signup-button{
+    font: {
+        size: 1em;
+        weight: 100;
+    }
+    padding: .8em 1.2em;
+    border: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--black-color);
+    }
+}
+
+%contact-info{
+    padding: 2.5em;
+    text-align: center;
+}
+
+%submit-button{
+    @extend %signup-button;
+    background-color: var(--black-color);
+    &:hover{
+    background-color: var(--light-gray);
+    color: var(--black-color);
+    }
+}

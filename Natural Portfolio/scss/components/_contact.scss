@@ -1,0 +1,80 @@
+@forward '../globals';
+@forward '../util';
+
+
+.contact {
+    background-color: var(--gray-color);
+    padding: 2em;
+
+    &__secondary-title{
+        text: {
+            transform: capitalize;
+            size: .8em;
+        }
+        font: {
+            weight: 400;
+        }
+    }
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        color: var(--white-color);
+        background-color: red;
+    }
+    &__item-mail, &__item-phone{
+        @extend %contact-info;
+        background-color: var(--heavy-gray);
+    }
+    &__item-place{
+        @extend %contact-info;
+        background-color: var(--green-color);
+    }
+    &__icon{
+        font-size: 2em;
+    }
+
+    &__email, &__place, &__phone{
+        margin: 0;
+    }
+
+    &__hr{
+        margin-block: 2em;
+    }
+
+    // CONTACT 
+
+    &__label{
+        display: block;
+        font: {
+            weight: 200;
+        }
+    }
+    &__form-control{
+        display: block;
+        width: 100%;
+        padding: 1.2em;
+        border: none;
+        margin-bottom: 1.5em;
+        resize: none;
+    }
+
+    &__form-submit{
+        @extend %submit-button;
+    }
+
+}
+
+// MOBILE VERSION 
+
+@media only screen and (max-width: 37.5em) {
+    .contact{
+
+        &__items{
+            display: block;
+        }
+
+    }
+    
+}

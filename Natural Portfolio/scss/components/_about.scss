@@ -1,0 +1,158 @@
+@forward '../globals';
+@forward '../util';
+
+
+.about {
+    padding: 1.2em 1em;
+    margin-bottom: 4em;
+
+
+    &__featured-images{
+        display: flex;
+        gap: 1em;
+        margin-bottom: 3em;
+    }
+    &__image{
+        width: 100%;
+    }
+    &__description{
+        font: {
+            weight: 200;
+        }
+        margin-bottom: 2em;
+    }
+
+
+    // Skills
+    &__skills-list{
+    margin-bottom: 3em;
+
+    }
+
+    &__fourth-title{
+        font: {
+            weight: 200;
+            size: 1.3em;
+        }
+    }
+    &__skill-title{
+        font: {
+            weight: 300;
+            size: .98em;
+        }
+    }
+    &__skill-container{
+        height: 2.5em;
+        width: 100%;
+        background-color: var(--gray-color);
+        color: var(--white-color);
+        display: flex;
+        margin-bottom: 1em;
+    }
+    &__photography-level{
+        width: 95%;
+        @extend %technical-skill;
+    }
+    &__design-level{
+        width: 85%;
+        @extend %technical-skill;
+    }
+    &__photoshop-level{
+        width: 80%;
+        @extend %technical-skill;
+    }
+    &__download{
+        color: var(--white-color);
+        font: {
+            size: .9em;
+        }
+        padding: 1em;
+        background-color: var(--heavy-gray);
+        border: none;
+        margin-top: .8em;
+
+        &:hover{
+            background-color: var(--gray-color);
+            color: var(--black-color);
+            cursor: pointer;
+        }
+    }
+
+
+            // COSTS
+            
+    &__price-item{
+        border: 0.01em solid #00000021;
+        min-width: 25em;
+        margin-bottom: 1em;
+        opacity: .5;
+        &:nth-child(2){
+            .about__price-header{
+                background-color: var(--green-color);
+            }
+        }
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &__price-header{
+        width: 100%;
+        height: 4.5em;
+        text-align: center;
+        place-content: center;
+        background-color: var(--black-color);
+        color: var(--white-color);
+        text: {
+            transform: capitalize;
+        };
+        font: {
+            size: 1.4em;
+        }
+    }
+
+
+    &__price-body{
+        background-color: var(--white-color);
+    }
+    &__price-feature{
+        margin: 0;
+        padding-block: 1.15em;
+        text-align: center;
+        border-bottom: 0.01em solid #00000021;
+    }
+    &__price{
+        display: block;
+        padding-top: .6em;
+        margin-bottom: .6em;
+        font: {
+            size: 2em;
+            weight: 500;
+        }
+    }
+    &__price-footer{
+        padding-block: 1em;
+        text-align: center;
+    }
+    &__signup{
+        @extend %signup-button;
+    }
+}
+
+@media only screen and (min-width: 37.5em) {
+    .about{
+        &__price-items{
+            display: flex;
+            gap: 1.5em;
+        }
+    }
+    
+}
+@media only screen and (max-width: 37.5em) {
+    .about{
+        &__featured-images{
+            display: block;
+        }
+    }
+    
+}
